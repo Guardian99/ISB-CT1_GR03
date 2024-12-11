@@ -23,8 +23,8 @@ This dataset contains information about **employees** in a company, including th
 - It serves as a **valuable tool** for understanding the dataset's **structure** and **quality**, helping to identify **potential issues** and **insights** for further analysis.
 - Below are few sample screenshots generated from the profile
 - - ![heatmap](images/heatmap.png)
-  - ![heatmap](images/education.png)
-  - ![heatmap](images/joiningYear.png)
+  - ![education](images/education.png)
+  - ![joiningYear](images/joiningYear.png)
 ## 4.Train-Test Split:  
 - In this step, we **split the dataset** into three distinct parts: **training (60%)**, **testing (20%)**, and **production (20%)**.  
 - To ensure **consistency** and **reproducibility** of results, we used a **fixed random seed** during the splitting process.  
@@ -46,8 +46,8 @@ This dataset contains information about **employees** in a company, including th
 - **Hyperparameter tuning** via **GridSearchCV** optimizes model performance, with the **best models** and their parameters stored for future use.  
 - This **structured approach** ensures **consistency**, **systematic optimization**, and **detailed evaluation** of models for effective predictions.
 - Below are screenshots of few models covering precision, f1-score etc:
-- ![heatmap](images/modelAccuracy1.png)
-- ![heatmap](images/modelAccuracy2.png)
+- ![modelAccuracy1](images/modelAccuracy1.png)
+- ![modelAccuracy2](images/modelAccuracy2.png)
 ## 7.ML Experimentation and Tracking with MLflow 
 This workflow integrates **MLflow** for tracking experiments, logging metrics, and storing artifacts during model training and optimization using K-Fold cross-validation.  
 - **Storage & Configuration:** Google Drive provides persistent storage for MLflow’s SQLite backend (mlflow.db) and artifacts. The experiment, "Employee Attrition Analysis," is tracked using a specified URI.  
@@ -69,7 +69,10 @@ An interactive web app is built using **Streamlit** to predict employee attritio
 - **User Input:** Users provide details such as education, joining year, age, city, payment tier, gender, benching status, and domain experience. These inputs are sent to the FastAPI model for predictions.  
 - **Real-Time Predictions:** The app displays the prediction (Stay or Leave) on the web page.  
 - **Enhanced Usability:** Dropdowns, sliders, and robust error handling ensure a seamless user experience, even during connectivity issues.  
-This integration of FastAPI and Streamlit delivers a user-friendly interface for real-time predictions, making it accessible and intuitive for stakeholders.  
+This integration of FastAPI and Streamlit delivers a user-friendly interface for real-time predictions, making it accessible and intuitive for stakeholders.
+- Below are Screenshots of the app that we hosted:
+- ![UI-1](images/UI-1.png)
+- ![UI-2](images/UI-2.png)
 ## 10.Model Monitoring  
 This step detects and visualizes **data drift** between training and production datasets to ensure long-term model reliability.  
 - **Drift Detection:** The **TabularDrift algorithm** identifies changes in feature distributions using a significance threshold (p-value < 0.05). Features with drift are highlighted, and an overall drift status is reported.  
@@ -78,4 +81,8 @@ This step detects and visualizes **data drift** between training and production 
   - **Bar charts** for categorical features.  
   These enable side-by-side comparison of training and production datasets.  
 This monitoring process supports timely interventions to maintain model accuracy and dependability over time.
+- Below are screenshots of the drift table and visual representation of the drifts:
+- ![modelMonitoring1](images/modelMonitoring1.png)
+- ![modelMonitoring2](images/modelMonitoring2.png)
+- ![modelMonitoring3](images/modelMonitoring3.png)
 
