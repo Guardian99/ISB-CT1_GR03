@@ -19,7 +19,8 @@ This dataset contains information about **employees** in a company, including th
   - **Nullable:** Indicates whether **null values** are acceptable.  
 ## 3. Profiling the Dataset:  
 - We generated a **comprehensive profile report** of the dataset using **Pandas Profiling**.  
-  - This report provides an **in-depth overview** of the data, including details about **individual variables**, **interactions**, **correlations**, **missing values**, **duplicate rows**, and other **key statistics**.  
+  - This report provides an **in-depth overview** of the data, including details about **individual variables**, **interactions**, **correlations**, **missing values**, **duplicate rows**, and other **key statistics**.
+  - ![heatmap](images/heatmap.png) 
 - It serves as a **valuable tool** for understanding the dataset's **structure** and **quality**, helping to identify **potential issues** and **insights** for further analysis.  
 ## 4.Train-Test Split:  
 - In this step, we **split the dataset** into three distinct parts: **training (60%)**, **testing (20%)**, and **production (20%)**.  
