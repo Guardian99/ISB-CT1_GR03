@@ -22,7 +22,9 @@ This dataset contains information about **employees** in a company, including th
   - This report provides an **in-depth overview** of the data, including details about **individual variables**, **interactions**, **correlations**, **missing values**, **duplicate rows**, and other **key statistics**.
 - It serves as a **valuable tool** for understanding the dataset's **structure** and **quality**, helping to identify **potential issues** and **insights** for further analysis.
 - Below are few sample screenshots generated from the profile
-- - ![heatmap](images/heatmap.png) ![heatmap](images/education.png) ![heatmap](images/joiningYear.png)
+- - ![heatmap](images/heatmap.png)
+  - ![heatmap](images/education.png)
+  - ![heatmap](images/joiningYear.png)
 ## 4.Train-Test Split:  
 - In this step, we **split the dataset** into three distinct parts: **training (60%)**, **testing (20%)**, and **production (20%)**.  
 - To ensure **consistency** and **reproducibility** of results, we used a **fixed random seed** during the splitting process.  
@@ -42,7 +44,10 @@ This dataset contains information about **employees** in a company, including th
   - Applying transformations like **standard scaling** for numerical features and **one-hot encoding** for categorical ones.  
 - **Five models**, including **Logistic Regression**, **Random Forest**, and **Gradient Boosting**, are trained and evaluated using **accuracy scores** and **classification reports**.  
 - **Hyperparameter tuning** via **GridSearchCV** optimizes model performance, with the **best models** and their parameters stored for future use.  
-- This **structured approach** ensures **consistency**, **systematic optimization**, and **detailed evaluation** of models for effective predictions. 
+- This **structured approach** ensures **consistency**, **systematic optimization**, and **detailed evaluation** of models for effective predictions.
+- Below are screenshots of few models covering precision, f1-score etc:
+- ![heatmap](images/modelAccuracy1.png)
+- ![heatmap](images/modelAccuracy2.png)
 ## 7.ML Experimentation and Tracking with MLflow 
 This workflow integrates **MLflow** for tracking experiments, logging metrics, and storing artifacts during model training and optimization using K-Fold cross-validation.  
 - **Storage & Configuration:** Google Drive provides persistent storage for MLflow’s SQLite backend (mlflow.db) and artifacts. The experiment, "Employee Attrition Analysis," is tracked using a specified URI.  
@@ -51,7 +56,7 @@ This workflow integrates **MLflow** for tracking experiments, logging metrics, a
 - **Reproducibility:** MLflow tracks hyperparameters, metrics, and model schemas, enabling reproducibility and performance comparison across models and parameters.  
 ### Remote Monitoring via MLflow UI 
 Using Ngrok, the MLflow UI is securely exposed to a public URL in Colab. This setup allows persistent tracking and remote access to experiments, supporting collaboration and scalability in cloud-based environments. 
-## 8.Model Deployment Using FastAPI* 
+## 8.Model Deployment Using FastAPI
 The best-performing model, identified from MLflow based on cross-validation or accuracy, is deployed using **FastAPI** to serve real-time predictions via a RESTful API.  
 - **Model Loading:** The trained model is loaded from a pickle file.  
 - **API Setup:** A FastAPI app defines endpoints for prediction, with input validation handled by Pydantic's `PredictionInput` schema.  
