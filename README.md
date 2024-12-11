@@ -1,4 +1,4 @@
-# CT1-MLOps Group Assignment 
+ # CT1-MLOps Group Assignment 
 
 ## Problem Statement Recap:  
 Our project involved developing a **complete lifecycle** of a **machine learning model**. To achieve this, we chose an **employee dataset** from **Kaggle**, aimed at predicting the likelihood of an employee **leaving the organization**. The dataset contains a variety of **features** that support the creation of a **predictive model** for **employee retention**.
@@ -55,13 +55,15 @@ This workflow integrates **MLflow** for tracking experiments, logging metrics, a
 - **Pipeline & Logging:** Preprocessing pipelines and models are combined, with hyperparameter tuning via GridSearchCV when applicable. MLflow logs metrics (accuracy, precision, recall, F1-score), cross-validation results, and model artifacts.  
 - **Reproducibility:** MLflow tracks hyperparameters, metrics, and model schemas, enabling reproducibility and performance comparison across models and parameters.  
 ### Remote Monitoring via MLflow UI 
-Using Ngrok, the MLflow UI is securely exposed to a public URL in Colab. This setup allows persistent tracking and remote access to experiments, supporting collaboration and scalability in cloud-based environments. 
+Using Ngrok, the MLflow UI is securely exposed to a public URL in Colab. This setup allows persistent tracking and remote access to experiments, supporting collaboration and scalability in cloud-based environments.
+![streamlit](images/streamlit.png)
 ## 8.Model Deployment Using FastAPI
 The best-performing model, identified from MLflow based on cross-validation or accuracy, is deployed using **FastAPI** to serve real-time predictions via a RESTful API.  
 - **Model Loading:** The trained model is loaded from a pickle file.  
 - **API Setup:** A FastAPI app defines endpoints for prediction, with input validation handled by Pydantic's `PredictionInput` schema.  
 - **Public Accessibility:** The API runs locally on port 8000 in Colab, with Ngrok exposing a secure public URL for remote access.  
 This deployment enables scalable, real-time predictions for tasks like employee attrition analysis, supporting collaborative model testing and application integration.
+![fastapi](images/fastapiResponse.png)
 ## 9.User Interface Development with Streamlit 
 An interactive web app is built using **Streamlit** to predict employee attrition by communicating with a **FastAPI** backend.  
 - **User Input:** Users provide details such as education, joining year, age, city, payment tier, gender, benching status, and domain experience. These inputs are sent to the FastAPI model for predictions.  
