@@ -20,8 +20,9 @@ This dataset contains information about **employees** in a company, including th
 ## 3. Profiling the Dataset:  
 - We generated a **comprehensive profile report** of the dataset using **Pandas Profiling**.  
   - This report provides an **in-depth overview** of the data, including details about **individual variables**, **interactions**, **correlations**, **missing values**, **duplicate rows**, and other **key statistics**.
-  - ![heatmap](images/heatmap.png) 
-- It serves as a **valuable tool** for understanding the dataset's **structure** and **quality**, helping to identify **potential issues** and **insights** for further analysis.  
+- It serves as a **valuable tool** for understanding the dataset's **structure** and **quality**, helping to identify **potential issues** and **insights** for further analysis.
+- Below are few sample screenshots generated from the profile
+- - ![heatmap](images/heatmap.png) ![heatmap](images/education.png) ![heatmap](images/joiningYear.png)
 ## 4.Train-Test Split:  
 - In this step, we **split the dataset** into three distinct parts: **training (60%)**, **testing (20%)**, and **production (20%)**.  
 - To ensure **consistency** and **reproducibility** of results, we used a **fixed random seed** during the splitting process.  
